@@ -146,7 +146,7 @@ function add() {
         priorityC1.style.backgroundColor = '#3CCF4E'
         tagD.appendChild(priorityC1)
         }
-    if (input3 === 'Medium') {
+    else if (input3 === 'Medium') {
         let priorityC2 = document.createElement('p')
         priorityC2.style.position = 'absolute'
         priorityC2.style.width = '10px'
@@ -159,7 +159,7 @@ function add() {
         priorityC2.style.backgroundColor = '#EBF400'
         tagD.appendChild(priorityC2)
     }
-    if (input3 === 'High') {
+    else (input3 === 'High') {
         let priorityC3 = document.createElement('p')
         priorityC3.style.position = 'absolute'
         priorityC3.style.width = '10px'
