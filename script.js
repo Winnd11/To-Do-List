@@ -53,10 +53,6 @@ setInterval(function() {
     }
 }, 1000);
 
-// charge tabs
-// there a away to make this work with only css but i cannot do this
-// so i make this in js
-
 function homeTab() {
     document.querySelector('.tab-content-1').style.display = 'initial'
     document.querySelector('.tab-content-2').style.display = 'none'
@@ -118,9 +114,9 @@ function add() {
 
     let tagP = document.createElement('p')
     let tagP2 = document.createElement('p')
-    let tagP3 = document.createElement('p')
     let tagD = document.createElement('div')
     let painel = document.querySelector('.task-list')
+    let priorityColor;
 
     tagP.innerHTML = 'Task: '
     tagP.innerHTML += input
@@ -128,55 +124,32 @@ function add() {
     tagP2.innerHTML += formatDate.toLocaleDateString('en-EN', optionsFormatDate)
     tagP.style.position = 'absolute'
     tagP2.style.marginLeft = '40%'
-    tagP3.innerHTML = 'Priority: '
-    tagP3.style.position = 'absolute'
-    tagP3.style.marginLeft = '80%'
-    tagP3.innerHTML += input3
 
     if (input3 === 'Low') {
-        let priorityC1 = document.createElement('p')
-        priorityC1.style.position = 'absolute'
-        priorityC1.style.width = '10px'
-        priorityC1.style.height = '10px'
-        priorityC1.style.borderRadius = '100%'
-        priorityC1.style.borderStyle = 'none'
-        priorityC1.style.boxShadow = 'none'
-        priorityC1.style.right = '3%'
-        priorityC1.style.marginTop = '25px'
-        priorityC1.style.backgroundColor = '#3CCF4E'
-        tagD.appendChild(priorityC1)
+        priorityColor = '#3CCF4E';
         }
     else if (input3 === 'Medium') {
-        let priorityC2 = document.createElement('p')
-        priorityC2.style.position = 'absolute'
-        priorityC2.style.width = '10px'
-        priorityC2.style.height = '10px'
-        priorityC2.style.borderRadius = '100%'
-        priorityC2.style.borderStyle = 'none'
-        priorityC2.style.boxShadow = 'none'
-        priorityC2.style.right = '3%'
-        priorityC2.style.marginTop = '25px'
-        priorityC2.style.backgroundColor = '#EBF400'
-        tagD.appendChild(priorityC2)
+        priorityColor = '#EBF400';
     }
     else {
-        let priorityC3 = document.createElement('p')
-        priorityC3.style.position = 'absolute'
-        priorityC3.style.width = '10px'
-        priorityC3.style.height = '10px'
-        priorityC3.style.borderRadius = '100%'
-        priorityC3.style.borderStyle = 'none'
-        priorityC3.style.boxShadow = 'none'
-        priorityC3.style.right = '3%'
-        priorityC3.style.marginTop = '25px'
-        priorityC3.style.backgroundColor = '#FF0303'
-        tagD.appendChild(priorityC3)
+        priorityColor = '#FF0303';
     }
 
+    let priorityCircle = document.createElement('p')
+    priorityCircle.style.position = 'absolute'
+    priorityCircle.style.width = '10px'
+    priorityCircle.style.height = '10px'
+    priorityCircle.style.borderRadius = '100%'
+    priorityCircle.style.borderStyle = 'none'
+    priorityCircle.style.boxShadow = 'none'
+    priorityCircle.style.right = '3%'
+    priorityCircle.style.marginTop = '25px'
+    priorityCircle.style.backgroundColor = priorityColor
+    
     painel.appendChild(tagD)
     tagD.appendChild(tagP)
     tagD.appendChild(tagP2)
-    tagD.appendChild(tagP3)
+    tagD.appendChild(priorityCircle)
     dialogTask.close()
 
 }
