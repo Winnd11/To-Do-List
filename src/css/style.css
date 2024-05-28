@@ -851,9 +851,10 @@ h1 {
 }
 
 .dashboard-painel {
+    margin-top: 1em;
     width: 8em;
-    height: 100%;
-    border-radius: 0 50px 50px 0;
+    height: 4em;
+    border-radius: 0 15px 15px 0;
     background-color: var(--black-background);
 }
 
