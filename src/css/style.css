@@ -89,6 +89,7 @@ h1 {
     height: 100vh;
     left: 0;
     top: 0;
+    bottom: 0;
 }
 
 .dashboard p:nth-child(3) {
@@ -97,25 +98,6 @@ h1 {
     margin-left: 50%;
     transform: translateX(-50px);
     font-size: 15px;
-}
-
-#fictional-email {
-    width: 120px;
-    color: #b6b6b6a0;
-    font-size: 13px;
-    margin-top: -1em;
-    margin-left: 50%;
-    transform: translate(-60px);
-}
-
-#profile-photo {
-    position: absolute;
-    max-width: 110px;
-    max-height: 110px;
-    margin-left: 50%;
-    margin-top: 3em;
-    border-radius: 100px;
-    transform: translateX(-55px);
 }
 
 #logo {
@@ -134,9 +116,9 @@ h1 {
     width: 180px;
     height: 38px;
     margin-left: -2em;
+    border-radius: 10px;
     margin-top: -1.6em;
-    display: none;
-}
+    dis
 
 .dashboard-links input {
     display: none;
@@ -144,7 +126,7 @@ h1 {
 
 .dashboard-links {
     position: absolute;
-    margin-top: -0.5em;
+    margin-top: 13em;
     margin-left: 1.5em;
 }
 
@@ -250,8 +232,6 @@ h1 {
     float: right;
     top: 0;
     bottom: 0;
-    /* background: url("../img/grid.png") no-repeat; */
-    /* background-size: 100%; */
 }
 
 .tab-content-1 img {
