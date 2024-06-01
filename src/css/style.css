@@ -952,3 +952,35 @@ h1 {
     text-indent: 1px;
     padding: 10px;
 }
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--black-background);
+    font-family: "Montserrat", sans-serif;
+}
+
+.header p:nth-child(2) {
+    width: 100px;
+    margin-left: 90%;
+    font-size: 15px;
+    color: var(--white-text);
+    margin-top: -4.5em;
+}
+
+#fictional-email {
+    width: 120px;
+    color: #b6b6b6a0;
+    font-size: 13px;
+    margin-left: 90%;
+    margin-top: -1.1em;
+}
+
+#profile-photo {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 100px;
+    margin-left: 86%;
+    transform: translateY(-1.5em);
+}
