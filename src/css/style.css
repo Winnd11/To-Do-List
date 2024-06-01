@@ -305,7 +305,7 @@ h1 {
     box-shadow: 6px 7px var(--black-background);
     border-radius: 10px;
     top: 0;
-    left: 58%;
+    margin-left: 26em;
     margin-top: 1em;
 }
 
@@ -323,7 +323,7 @@ h1 {
     position: absolute;
     width: 120px;
     height: 60px;
-    background: linear-gradient(0deg, #fff 50%, #000 50%);
+    background-color: var(--white-text);
     border: 2px solid var(--black-background);
     box-shadow: 6px 7px var(--black-background);
     border-radius: 10px;
@@ -336,7 +336,7 @@ h1 {
     width: max-content;
     color: var(--black-background);
     font-family: 'Kanit';
-    margin-left: 45%;
+    margin-left: 50%;
     margin-top: 5px;
     margin-bottom: 5px;
     transform: translateX(-42px);
