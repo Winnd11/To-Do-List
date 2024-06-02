@@ -1,32 +1,20 @@
-const settings = document.querySelector('#settings')
-const notifications = document.querySelector('#notifications')
-const dialog = document.querySelector('dialog')
+const settings = document.querySelector('#settings');
+const notifications = document.querySelector('#notifications');
+const dialog = document.querySelector('dialog');
 
-// Home //
+//---------------- Home ----------------//
 
 document.querySelector('#home').addEventListener('change', homeTab)
 document.querySelector('#members').addEventListener('change', membersTab)
 document.querySelector('#task').addEventListener('change', taskTab)
 document.querySelector('#faq').addEventListener('change', faqTab)
+document.querySelector('.github').addEventListener('click', github)
 
-settings.addEventListener('click', settingsModal)
-notifications.addEventListener('click', notificationsModal)
+function github() {
+    window.open("https://github.com/Winnd11", '_blank').focus()
+};
 
-document.querySelector('body').addEventListener('click', function(event) {
-    if (event.target === dialog) {
-        dialog.close()
-    }
-})
-
-function settingsModal() {
-    dialog.showModal()
-}
-
-function notificationsModal() {
-    dialog.showModal()
-}
-
-// config for date
+//---------------- Date ----------------//
 
 var date = new Date()
 
@@ -37,7 +25,6 @@ const optionsDate = {
 }
 
 document.querySelector('.today-day p:nth-child(1)').textContent = date.toLocaleDateString('en-EN', optionsDate)
-console.log(date.toLocaleDateString('en-EN', optionsDate))
 
 const optionsTime = {
     hour: 'numeric',
@@ -45,13 +32,15 @@ const optionsTime = {
     hour12: false
 }
 
-setInterval(function() {
-    for (let i = 0;i==0; i++) {
+setInterval(() => {
+    for (let i = 0; i == 0; i++) {
         let time = new Date()
 
         document.querySelector('.today-day p:nth-child(2)').textContent = time.toLocaleTimeString('en-EN', optionsTime)
     }
-}, 1000);
+}, 1000)
+
+//---------------- Charge tabs ----------------//
 
 function homeTab() {
     document.querySelector('.tab-content-1').style.display = 'initial'
@@ -112,10 +101,10 @@ function add() {
         year: 'numeric'
     }
 
-    let tagP = document.createElement('p')
-    let tagP2 = document.createElement('p')
-    let tagD = document.createElement('div')
-    let painel = document.querySelector('.task-list')
+    let tagP = document.createElement('p');
+    let tagP2 = document.createElement('p');
+    let tagD = document.createElement('div');
+    let painel = document.querySelector('.task-list');
     let priorityColor;
 
     tagP.innerHTML = 'Task: '
@@ -123,7 +112,8 @@ function add() {
     tagP2.innerHTML = 'Date: '
     tagP2.innerHTML += formatDate.toLocaleDateString('en-EN', optionsFormatDate)
     tagP.style.position = 'absolute'
-    tagP2.style.marginLeft = '40%'
+    tagP.style.marginLeft = '1em'
+    tagP2.style.marginLeft = '30em'
 
     if (input3 === 'Low') {
         priorityColor = '#3CCF4E';
@@ -142,14 +132,13 @@ function add() {
     priorityCircle.style.borderRadius = '100%'
     priorityCircle.style.borderStyle = 'none'
     priorityCircle.style.boxShadow = 'none'
-    priorityCircle.style.right = '3%'
+    priorityCircle.style.left = '1%'
     priorityCircle.style.marginTop = '25px'
     priorityCircle.style.backgroundColor = priorityColor
-    
+
     painel.appendChild(tagD)
     tagD.appendChild(tagP)
     tagD.appendChild(tagP2)
     tagD.appendChild(priorityCircle)
     dialogTask.close()
-
-}
+};
