@@ -66,6 +66,19 @@ h1 {
 
 /*  ------------- HOME ------------- */
 
+.github {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-color: var(--white-text);
+    border: 2px solid var(--black-background);
+    box-shadow: 6px 7px var(--black-background);
+    border-radius: 10px;
+    top: 0;
+    margin-left: 38.5em;
+    margin-top: 1em;
+}
+
 .links {
     display: flex;
     justify-content: center;
