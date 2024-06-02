@@ -79,6 +79,13 @@ h1 {
     margin-top: 1em;
 }
 
+.github svg {                      
+    margin-top: 15px;
+    margin-left: 50%;
+    transform: translateX(-17px);
+    cursor: pointer;
+}
+
 .links {
     display: flex;
     justify-content: center;
@@ -955,15 +962,6 @@ h1 {
     margin-left: 0.5em;
     text-indent: 0.2em;
     font-size: 16px;
-}
-
-#faq-github {
-    text-decoration: none;
-    text-transform: none;
-    color: var(--black-background);
-    font-family: 'Kanit';
-    text-indent: 1px;
-    padding: 10px;
 }
 
 .header {
