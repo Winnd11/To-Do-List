@@ -1,7 +1,7 @@
 <h1 align="center">To Do List</h1>
 <p>Another one of the several projects I made with html, css and javascript. a website where you can take notes</p>
 
-## Working in
+## Working in 🛠️
 
 <ul>
   <li>Responsive</li>
