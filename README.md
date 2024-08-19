@@ -1,11 +1,10 @@
 <h1 align="center">To Do List</h1>
 <p>Another one of the several projects I made with html, css and javascript. a website where you can take notes</p>
 
-## Working in 🛠️
+## Working in
 
 <ul>
   <li>Responsive</li>
-  <li>Local Storage</li>
 </ul>
 
 <img src="src/img/Captura de tela 2024-06-01 095629.png">
